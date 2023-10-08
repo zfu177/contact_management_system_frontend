@@ -17,7 +17,7 @@ $(document).ready(function () {
         <td>${d.notes}</td>
         <th><a class="waves-effect waves-light btn">View</a></th>
         <th><a class="waves-effect waves-light btn">Edit</a></th>
-        <th><a class="waves-effect waves-light btn">Delete</a></th>
+        <th><a class="waves-effect waves-light btn" onclick="deleteContact(${d.id})">Delete</a></th>
       </tr>
     `;
     });
@@ -59,10 +59,26 @@ function add_contact() {
     notes
   })
     .fail(function (data) {
-      alert(JSON.stringify(data.responseText, null, 2));
+      console.log(data.responseText);
+      alert('Something went wrong, please check your inputs');
     })
     .done(function (data) {
       alert('Success');
       window.open('index.html');
     });
+}
+
+function deleteContact(id) {
+  $.ajax({
+    url: `${API_URL}/${id}`,
+    type: 'DELETE',
+    success: function (data) {
+      console.log(data);
+      alert('Success');
+      window.open('index.html');
+    }
+  }).fail(function (data) {
+    console.log(data.responseText);
+    alert('Something went wrong, please refresh and try again');
+  });
 }

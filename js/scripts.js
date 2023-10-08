@@ -151,7 +151,10 @@ function update_contact(id) {
       location.replace('index.html');
     }
   }).fail(function (data) {
-    console.log(data.responseText);
-    alert('Something went wrong, please refresh and try again');
+    if (data.responseText.includes('Duplicate entry')) {
+      alert('Add failed, duplicated Email address');
+    } else {
+      alert('Something went wrong, please check logs or try again');
+    }
   });
 }

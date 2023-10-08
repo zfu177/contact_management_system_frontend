@@ -7,3 +7,16 @@ body {
 main {
   flex: 1 0 auto;
 }
+
+.brand-logo img {
+  max-height: 25px;
+}
+
+.striped th {
+  text-align: center;
+}
+
+.striped td {
+  text-align: center;
+}
+

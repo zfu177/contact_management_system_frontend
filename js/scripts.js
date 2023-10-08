@@ -15,7 +15,9 @@ $(document).ready(function () {
         <td>${d.email}</td>
         <td>+${d.country_code} ${d.phone}</td>
         <td>${d.notes}</td>
+        <th><a class="waves-effect waves-light btn">View</a></th>
         <th><a class="waves-effect waves-light btn">Edit</a></th>
+        <th><a class="waves-effect waves-light btn">Delete</a></th>
       </tr>
     `;
     });

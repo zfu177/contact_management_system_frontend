@@ -39,40 +39,39 @@
           <form class="col s12" id="update_contact_form">
             <div class="row">
               <div class="input-field col s6">
-                <input id="first_name" type="text" class="validate" data-length="25" required>
-                <label class="active" for="first_name">First Name (Required)</label>
-                <span class="helper-text" data-error="Length must between 1 and 25"></span>
+                <input id="first_name" type="text" class="validate" data-length="25" minlength="1" maxlength="25" pattern="[A-Za-z]*" required>
+                <label for="first_name">First Name (Required)</label>
+                <span class="helper-text" data-error="Must be string"></span>
               </div>
               <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate" data-length="25" required>
-                <label class="active" for="last_name">Last Name (Required)</label>
-                <span class="helper-text" data-error="Length must between 1 and 25"></span>
+                <input id="last_name" type="text" class="validate" data-length="25" minlength="1" maxlength="25" pattern="[A-Za-z]*" required>
+                <label for="last_name">Last Name (Required)</label>
+                <span class="helper-text" data-error="Must be string"></span>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="email" type="email" class="validate" data-length="25" required>
-                <label class="active" for="email">Email (Required)</label>
-                <span class="helper-text" data-error="Invalid Email format or length"></span>
+                <input id="email" type="email" class="validate" data-length="25" minlength="1" maxlength="25" required>
+                <label for="email">Email (Required)</label>
+                <span class="helper-text" data-error="Invalid Email format"></span>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s6">
-                <input id="country_code" type="number" class="validate" data-length="3" required>
-                <label class="active" for="country_code">Country Code (Required)</label>
-                <span class="helper-text" data-error="Length must between 1 and 3"></span>
+                <input id="country_code" type="text" class="validate" data-length="3" pattern="\d*" maxlength="3" required>
+                <label for="country_code">Country Code (Required)</label>
+                <span class="helper-text" data-error="Must be number"></span>
               </div>
               <div class="input-field col s6">
-                <input id="phone" type="number" class="validate" data-length="12" required>
-                <label class="active" for="phone">Phone (Required)</label>
-                <span class="helper-text" data-error="Length must between 1 and 12"></span>
+                <input id="phone" type="text" class="validate" data-length="12" pattern="\d*" maxlength="12" required>
+                <label for="phone">Phone (Required)</label>
+                <span class="helper-text" data-error="Must be number"></span>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <textarea id="notes" class="materialize-textarea" data-length="255"></textarea>
-                <label class="active" for="notes">Notes (Optional)</label>
-                <span class="helper-text" data-error="Length must between 0 and 255"></span>
+                <textarea id="notes" class="materialize-textarea" data-length="255" maxlength="255"></textarea>
+                <label for="notes">Notes (Optional)</label>
               </div>
             </div>
             <div class="row">

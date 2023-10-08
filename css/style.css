@@ -12,14 +12,6 @@ main {
   max-height: 25px;
 }
 
-.striped th {
-  text-align: center;
-}
-
-.striped td {
-  text-align: center;
-}
-
 .submit {
   color: white;
 }

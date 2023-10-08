@@ -113,18 +113,21 @@ function add_contact() {
 
 // Delete Contact handler
 function deleteContact(id) {
-  $.ajax({
-    url: `${API_URL}/${id}`,
-    type: 'DELETE',
-    success: function (data) {
-      console.log(data);
-      alert('Success');
-      location.replace('index.html');
-    }
-  }).fail(function (data) {
-    console.log(data.responseText);
-    alert('Something went wrong, please refresh and try again');
-  });
+  if (confirm('Are you sure you want to delete this contact?')) {
+    $.ajax({
+      url: `${API_URL}/${id}`,
+      type: 'DELETE',
+      success: function (data) {
+        console.log(data);
+        location.replace('index.html');
+      }
+    }).fail(function (data) {
+      console.log(data.responseText);
+      alert('Something went wrong, please refresh and try again');
+    });
+  } else {
+    return false;
+  }
 }
 
 // Redirect to view.html

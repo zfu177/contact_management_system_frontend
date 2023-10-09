@@ -3,6 +3,13 @@ const API_URL = 'http://localhost:8080/contacts';
 
 // Init function
 $(document).ready(function () {
+  if ($(window).width() < 960) {
+    document.getElementById('brand-logo').innerHTML = '<img src="images/h&s.png" />CMS';
+  } else {
+    document.getElementById('brand-logo').innerHTML =
+      '<img src="images/h&s.png" /> H&S Travel - Contact Management System';
+  }
+
   const url = window.location.pathname;
 
   // When open index, get contact lists and append rows to table
@@ -164,3 +171,12 @@ function update_contact(id) {
     }
   });
 }
+
+$(window).resize(function () {
+  if ($(window).width() < 960) {
+    document.getElementById('brand-logo').innerHTML = '<img src="images/h&s.png" />CMS';
+  } else {
+    document.getElementById('brand-logo').innerHTML =
+      '<img src="images/h&s.png" /> H&S Travel - Contact Management System';
+  }
+});

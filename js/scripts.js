@@ -82,6 +82,13 @@ $(document).ready(function () {
   }
 });
 
+// Initiate sidenav
+document.addEventListener('DOMContentLoaded', function () {
+  var elems = document.querySelectorAll('.sidenav');
+  var options = {};
+  M.Sidenav.init(elems, options);
+});
+
 // Add Contact handler
 function add_contact() {
   event.preventDefault();

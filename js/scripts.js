@@ -1,5 +1,7 @@
+// Define Backend API URL
 const API_URL = 'http://localhost:8080/contacts';
 
+// Init function
 $(document).ready(function () {
   const url = window.location.pathname;
 
@@ -78,12 +80,6 @@ $(document).ready(function () {
         });
     }
   }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  var elems = document.querySelectorAll('select');
-  var options = {};
-  var instances = M.FormSelect.init(elems, options);
 });
 
 // Add Contact handler

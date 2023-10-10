@@ -60,6 +60,7 @@ $(document).ready(function () {
         .fail(function (data) {
           console.log(data.responseText);
           alert('Something went wrong, please try again');
+          location.replace('index.html');
         })
         .done(function (data) {
           // In case there's no data, redirect to home page.

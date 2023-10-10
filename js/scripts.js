@@ -166,7 +166,7 @@ function update_contact(id) {
     }
   }).fail(function (data) {
     if (data.responseText.includes('Duplicate entry')) {
-      alert('Add failed, duplicated Email address');
+      alert('Update failed, duplicated Email address');
     } else {
       alert('Something went wrong, please check logs or try again');
     }

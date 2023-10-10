@@ -42,12 +42,12 @@
           <form class="col s12" id="update_contact_form">
             <div class="row">
               <div class="input-field col s6">
-                <input id="first_name" type="text" class="validate" data-length="25" minlength="1" maxlength="25" pattern="[A-Za-z]*" required>
+                <input id="first_name" type="text" class="validate" data-length="25" minlength="1" maxlength="25" pattern="[A-Za-z\s]*" required>
                 <label for="first_name">First Name (Required)</label>
                 <span class="helper-text" data-error="Must be string"></span>
               </div>
               <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate" data-length="25" minlength="1" maxlength="25" pattern="[A-Za-z]*" required>
+                <input id="last_name" type="text" class="validate" data-length="25" minlength="1" maxlength="25" pattern="[A-Za-z\s]*" required>
                 <label for="last_name">Last Name (Required)</label>
                 <span class="helper-text" data-error="Must be string"></span>
               </div>

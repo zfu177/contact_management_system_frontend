@@ -1,5 +1,5 @@
 // Define Backend API URL
-const API_URL = 'http://localhost:8080/contacts';
+const API_URL = 'http://localhost:3000/contacts';
 
 // Init function
 $(document).ready(function () {
